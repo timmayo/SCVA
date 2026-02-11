@@ -82,7 +82,7 @@
             "parameters": {
               "emailMessage/To": "@triggerBody()['text']",
               "emailMessage/Subject": "@triggerBody()['text_1']",
-              "emailMessage/Body": "<p>@{triggerBody()['text_2']}</p>"
+              "emailMessage/Body": "<p>@{triggerBody()['text_2']} This is to test versioning</p>"
             },
             "authentication": "@parameters('$authentication')"
           }
