@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>scva_scvaapp_94be6</Name>
+  <AppVersion>2026-02-10T20:40:40Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.26013.14.0</CreatedByClientVersion>
+  <MinClientVersion>3.26013.14.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"640","primaryDeviceHeight":"1136","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","showStatusBar":"false","publisherVersion":"3.26013.14","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>SCVA App</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{"104d6ed1-64df-4ce1-b06c-181afe755284":{"id":"/providers/microsoft.powerapps/apis/shared_logicflows","displayName":"Logic flows","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1774/1.0.1774.4397/logicflows/icon.png","dataSources":["SCVAFlow"],"dependencies":["5a31d1c6-8795-4446-82bf-d93cc5fbd163"],"dependents":[],"parameterHints":{"workflowName":{"value":"fa79a2ba-c8a5-4c76-a4b7-38fae09b31f9"},"workflowEntityId":{"value":"bf269d13-c006-f111-8406-7ced8d3c05e5"},"workflowDisplayName":{"value":"SCVA Flow"},"5a31d1c6-8795-4446-82bf-d93cc5fbd163":{"value":"shared_office365"}},"parameterHintsV2":{"workflowName":{"value":"fa79a2ba-c8a5-4c76-a4b7-38fae09b31f9"},"workflowEntityId":{"value":"bf269d13-c006-f111-8406-7ced8d3c05e5"},"workflowDisplayName":{"value":"SCVA Flow"},"shared_office365":{"value":"5a31d1c6-8795-4446-82bf-d93cc5fbd163"}},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["Run"]},"5a31d1c6-8795-4446-82bf-d93cc5fbd163":{"id":"/providers/microsoft.powerapps/apis/shared_office365","displayName":"Office 365 Outlook","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/releases/v1.0.1788/1.0.1788.4524/office365/icon.png","dataSources":[],"dependencies":[],"dependents":["104d6ed1-64df-4ce1-b06c-181afe755284"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"dependencyid":"bf269d13-c006-f111-8406-7ced8d3c05e5","componenttype":29,"componenttypeplatformname":"Workflow"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/scva_scvaapp_94be6_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/scva_scvaapp_94be6_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/scva_scvaapp_94be6_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>
