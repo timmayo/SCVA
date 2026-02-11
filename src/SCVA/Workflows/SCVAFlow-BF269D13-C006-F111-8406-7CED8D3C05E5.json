@@ -1,0 +1,116 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_office365": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "cr49f_sharedoffice365_dfd9b"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "38006673-d1b9-4e9d-8b53-980c3f79dd44"
+          },
+          "type": "Request",
+          "kind": "PowerAppV2",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Sendanemail(V2)_To": {
+                  "type": "string",
+                  "format": "email",
+                  "description": "Specify email addresses separated by semicolons like someone@contoso.com",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Sendanemail(V2)_Subject": {
+                  "type": "string",
+                  "description": "Specify the subject of the mail",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Sendanemail(V2)_Body": {
+                  "type": "string",
+                  "format": "html",
+                  "description": "Specify the body of the mail. This parameter is used as part of \"9BEC3F65-3B03-407F-B0C0-91D14F269282\"",
+                  "x-ms-powerflows-param-ispartial": true
+                },
+                "text": {
+                  "title": "To",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "text_1": {
+                  "title": "Subject",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "text_2": {
+                  "title": "Body",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "Sendanemail(V2)_To",
+                "Sendanemail(V2)_Subject",
+                "Sendanemail(V2)_Body",
+                "text",
+                "text_1",
+                "text_2"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Send_an_email_(V2)": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "8aa8d7c2-d051-4f1f-9cc5-dae154069444"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/To": "@triggerBody()['Sendanemail(V2)_To']",
+              "emailMessage/Subject": "@triggerBody()['Sendanemail(V2)_Subject']",
+              "emailMessage/Body": "<p>@{triggerBody()['Sendanemail(V2)_Body']}</p>"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": "0253862642354d9187425cfc8b3bdda2"
+  },
+  "schemaVersion": "1.0.0.0"
+}
