@@ -1,10 +1,10 @@
 {
   "properties": {
     "connectionReferences": {
-      "shared_office365": {
+      "shared_office365_1": {
         "runtimeSource": "invoker",
         "connection": {
-          "connectionReferenceLogicalName": "cr49f_sharedoffice365_dfd9b"
+          "connectionReferenceLogicalName": "scva_sharedoffice365_72def"
         },
         "api": {
           "name": "shared_office365"
@@ -27,7 +27,7 @@
       "triggers": {
         "manual": {
           "metadata": {
-            "operationMetadataId": "38006673-d1b9-4e9d-8b53-980c3f79dd44"
+            "operationMetadataId": "7a1e9dbf-d890-4ea2-8db2-b12ffb5ac8f9"
           },
           "type": "Request",
           "kind": "PowerAppV2",
@@ -35,23 +35,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "Sendanemail(V2)_To": {
-                  "type": "string",
-                  "format": "email",
-                  "description": "Specify email addresses separated by semicolons like someone@contoso.com",
-                  "x-ms-powerflows-param-ispartial": false
-                },
-                "Sendanemail(V2)_Subject": {
-                  "type": "string",
-                  "description": "Specify the subject of the mail",
-                  "x-ms-powerflows-param-ispartial": false
-                },
-                "Sendanemail(V2)_Body": {
-                  "type": "string",
-                  "format": "html",
-                  "description": "Specify the body of the mail. This parameter is used as part of \"9BEC3F65-3B03-407F-B0C0-91D14F269282\"",
-                  "x-ms-powerflows-param-ispartial": true
-                },
                 "text": {
                   "title": "To",
                   "type": "string",
@@ -75,9 +58,6 @@
                 }
               },
               "required": [
-                "Sendanemail(V2)_To",
-                "Sendanemail(V2)_Subject",
-                "Sendanemail(V2)_Body",
                 "text",
                 "text_1",
                 "text_2"
@@ -95,14 +75,14 @@
           "type": "OpenApiConnection",
           "inputs": {
             "host": {
-              "connectionName": "shared_office365",
+              "connectionName": "shared_office365_1",
               "operationId": "SendEmailV2",
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
             },
             "parameters": {
-              "emailMessage/To": "@triggerBody()['Sendanemail(V2)_To']",
-              "emailMessage/Subject": "@triggerBody()['Sendanemail(V2)_Subject']",
-              "emailMessage/Body": "<p>@{triggerBody()['Sendanemail(V2)_Body']}</p>"
+              "emailMessage/To": "@triggerBody()['text']",
+              "emailMessage/Subject": "@triggerBody()['text_1']",
+              "emailMessage/Body": "<p>@{triggerBody()['text_2']}</p>"
             },
             "authentication": "@parameters('$authentication')"
           }

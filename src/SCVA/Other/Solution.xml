@@ -81,11 +81,6 @@
       <RootComponent type="29" id="{bf269d13-c006-f111-8406-7ced8d3c05e5}" behavior="0" />
       <RootComponent type="300" schemaName="scva_scvaapp_94be6" behavior="0" />
     </RootComponents>
-    <MissingDependencies>
-      <MissingDependency>
-        <Required type="connectionreference" displayName="cr49f_sharedoffice365_dfd9b" solution="Active" id.connectionreferencelogicalname="cr49f_sharedoffice365_dfd9b" />
-        <Dependent type="29" displayName="SCVA Flow" id="{bf269d13-c006-f111-8406-7ced8d3c05e5}" />
-      </MissingDependency>
-    </MissingDependencies>
+    <MissingDependencies />
   </SolutionManifest>
 </ImportExportXml>
